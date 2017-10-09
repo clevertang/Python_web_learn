@@ -1,0 +1,101 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <STYLE >.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}</STYLE>
+<script type="text/javascript" src="a.js"></script>
+<script type="text/javascript">
+ /* 点击按钮，下拉菜单在 显示/隐藏 之间切换 */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// 点击下拉菜单意外区域隐藏
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+
+ </script>
+</head>
+
+<body>
+<div class="container">
+  <a href="#home">主页</a>
+  <a href="#news">新闻</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">下拉菜单</button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+</div>
+
+<h3>导航栏中的下拉菜单</h3>
+<p>点击按钮显示下拉菜单</p>
+</body>
+</html>

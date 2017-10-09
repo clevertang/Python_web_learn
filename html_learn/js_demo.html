@@ -1,0 +1,39 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<!-内部嵌入方式 &ndash;&gt;-->
+    <!--<meta charset="UTF-8">-->
+    <!--&lt;!&ndash;<script>&ndash;&gt;-->
+        <!--&lt;!&ndash;function hello()&ndash;&gt;-->
+        <!--&lt;!&ndash;{&ndash;&gt;-->
+        <!--&lt;!&ndash;document.getElementById("message").innerHTML="hell js"&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;</script>&ndash;&gt;-->
+    <!--<!-外部嵌入方式 &ndash;&gt;-->
+    <!--<script src="a.js"></script>-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="message">-->
+<!--<!-bottun是一个按钮控件,其onclick属性定义当用户单机按钮的js脚本&ndash;&gt;-->
+<!--</div>-->
+    <!--<button type="button" onclick="hello();">try</button>-->
+<!--</body>-->
+<!--</html>-->
+
+//test.html
+<html>
+<head>
+<script type="text/javascript" src="a.js"></script>
+<script type="text/javascript">
+  window.onload = function(){
+    var fun = abc; //引用abc函数
+    fun(123);
+  };
+
+ </script>
+</head>
+
+<body>
+</body>
+</html>
